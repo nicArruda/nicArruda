@@ -1,3 +1,5 @@
+<img src = "vingado.jpg" width = "200px"> 
+
 ## Olá eu sou NIcolas Arruda
 - Não trabalho na área no momento
 - Estou graduando engenharia de softwaere
