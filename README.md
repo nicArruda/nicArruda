@@ -1,4 +1,4 @@
-<img src = "vingado.jpg" width = "200px"> 
+<img src = "avenged.jpg" width = "250px"> 
 
 ## Olá eu sou NIcolas Arruda
 - Não trabalho na área no momento
