@@ -29,6 +29,12 @@ www.linkedin.com/in/nicolas-arruda-castelo-lima-30a7bb3b5
   
 </div>
 
+![Snake animation](https://github.com/nicArruda/nicArruda/blob/output/github-snake.svg)
+
+
+
+
+
 
 
 
