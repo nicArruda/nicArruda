@@ -1,0 +1,78 @@
+
+QUESTÃO 1
+
+#include <stdio.h>
+int numero, par, impar;
+main(){
+	par = 0;
+	impar = 0;
+	
+	for(int i=1; i<=5; i++){
+		printf("\nDigite o %d numero: ", i);
+		scanf("%i", &numero);
+		if((i%2) == 0){
+			par++;
+		}else{
+			impar++;
+		}
+	
+	}
+	printf("\nTotal de numeros pares: %i", par);
+	printf("\nTotal de numeros impares: %i", impar);
+}
+
+QUESTÃO 2
+
+#include <stdio.h>
+float altura, maior, menor;
+main(){
+	maior = 0;
+	menor = 5;
+	
+	for(int i=1; i<=6; i++){
+		printf("\nDigite o %i altura:\n ", i);
+		scanf("%f", &altura);
+		if(altura > maior){
+			maior= altura;
+		}
+		if(altura < menor){
+			menor = altura;
+		}
+	
+	
+	}
+	printf("\nMaior altura %.2f", maior);
+	printf("\nMenor altura %.2f", menor);
+}
+
+QUESTÃO 3
+
+#include <stdIo.h>
+int numero;
+main(){
+	printf("\nDigite um numero menor que 10 :");
+	scanf("%i", &numero);
+	
+	for (int i=1; i<=10; i++)
+	printf("%i * %i = %i\n", numero, i , numero * i);
+	
+}
+
+
+
+
+
+#include <stdio.h>
+int numero;
+main(){
+	impar = 0
+	for(int i=10; i<=10; i++)
+	pritnf("Digite um nuemro entre 10 e 20:");
+	scanf("%i", &numero);
+	if((i%2) != 0);
+	
+}
+
+
+
+
