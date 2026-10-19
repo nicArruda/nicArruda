@@ -1,0 +1,27 @@
+EXEMPLO DE UM CODIGO EM WHILE  E DO WHILE 
+#include<stdio.h>
+
+main(){
+	int x = 0;
+	while(x <= 0){
+		printf("\nValor do x= %d", x);
+		x++;
+	}
+	x = 0;
+	while(x == 0){
+		printf("\nDigite 0 para continuar ou outro numero numero para sair:\n");
+		scanf("%i", &x);
+	}
+	printf("\n================================executando do while======================\n");
+	x = 0;
+	do{
+		printf("\nValor do x= %d", x);
+		x++;
+	}while(x <= 10);
+}
+
+
+
+
+
+=====================================LISTA DE EXERCICIO 1 ===========================================
