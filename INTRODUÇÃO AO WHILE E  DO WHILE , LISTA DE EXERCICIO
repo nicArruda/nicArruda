@@ -25,3 +25,74 @@ main(){
 
 
 =====================================LISTA DE EXERCICIO 1 ===========================================
+
+
+QUESTÃO 1: 
+
+#include <stdio.h>
+main(){
+	int x = 0;
+	while (x <= 30){
+		if( (x%2) != 0){
+			printf("\nValor impar: %d", x);			
+		}
+		x++;
+	}
+}
+
+QUESTÃO 2:
+
+#include <stdio.h>
+float media,n1,n2;
+main(){
+	printf("Digite a nota da primeira avaliação(0 a 10):\n");
+	scanf("%f", &n1);
+	while( (n1<0) || (n1>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n1);
+	}
+	
+	printf("Digite a nota da segunda avaliação(0 a 10):\n");
+	scanf("%f", &n2);
+	while( (n2<0) || (n2>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n2);
+	}
+	media = (n1+n2) / 2;
+	printf("\nMedia: %.2f", media);	
+}
+
+QUESTÃO 3:
+
+#include<stdio.h>
+
+main(){
+	int x;
+	do{
+		printf("\n1 - SAUDACAO" );
+		printf("\n2 - BRONCA" );
+		printf("\n3 - FELICITACAO" );
+		printf("\n0 - FIM" );
+		printf("\nDigite um numero :");
+		scanf("%i", &x);
+	switch(x){
+		case 1:
+			printf("\nOla como vai ?");
+			break;
+			case 2:
+				printf("\nVamos estudar mais");
+				break;
+				case 3:
+					printf("\nMeus parabens");
+					break;
+					case 0:
+						printf("\nFIM");
+						break;
+						default:
+							printf("Numero invalido");
+							break;
+							
+	}
+}while(x != 0);
+
+}
