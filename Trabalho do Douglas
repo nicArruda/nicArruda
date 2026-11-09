@@ -1,0 +1,167 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+struct Aluno {
+    int matricula;
+    string nome;
+    int idade;
+    string curso;
+};
+
+
+Aluno alunos[100];
+
+
+int quantidade = 0;
+
+
+void cadastrar() {
+    if (quantidade >= 100) {
+        cout << "\nLimite de cadastros atingido!\n";
+        return;
+    }
+
+    cout << "\n--- CADASTRAR ALUNO ---\n";
+
+    cout << "Digite a matricula: ";
+    cin >> alunos[quantidade].matricula;
+
+    cin.ignore();
+
+    cout << "Digite o nome: ";
+    getline(cin, alunos[quantidade].nome);
+
+    cout << "Digite a idade: ";
+    cin >> alunos[quantidade].idade;
+
+    cin.ignore();
+
+    cout << "Digite o curso: ";
+    getline(cin, alunos[quantidade].curso);
+
+    quantidade++;
+
+    cout << "\nAluno cadastrado com sucesso!\n";
+}
+
+
+void consultar() {
+    int matricula;
+    bool encontrado = false;
+
+    cout << "\nDigite a matricula do aluno: ";
+    cin >> matricula;
+
+    for (int i = 0; i < quantidade; i++) {
+        if (alunos[i].matricula == matricula) {
+            cout << "\n--- ALUNO ENCONTRADO ---\n";
+            cout << "Matricula: " << alunos[i].matricula << endl;
+            cout << "Nome: " << alunos[i].nome << endl;
+            cout << "Idade: " << alunos[i].idade << endl;
+            cout << "Curso: " << alunos[i].curso << endl;
+
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        cout << "\nCadastro nao localizado!\n";
+    }
+}
+
+
+void listar() {
+    if (quantidade == 0) {
+        cout << "\nNenhum aluno cadastrado!\n";
+        return;
+    }
+
+    cout << "\n--- LISTA DE ALUNOS ---\n";
+
+    for (int i = 0; i < quantidade; i++) {
+        cout << "\nAluno " << i + 1 << endl;
+        cout << "Matricula: " << alunos[i].matricula << endl;
+        cout << "Nome: " << alunos[i].nome << endl;
+        cout << "Idade: " << alunos[i].idade << endl;
+        cout << "Curso: " << alunos[i].curso << endl;
+        cout << "-------------------------\n";
+    }
+}
+
+
+void remover() {
+    int matricula;
+    bool encontrado = false;
+
+    cout << "\nDigite a matricula do aluno que deseja remover: ";
+    cin >> matricula;
+
+    for (int i = 0; i < quantidade; i++) {
+        if (alunos[i].matricula == matricula) {
+
+            // Copia o ultimo cadastro para a posicao removida
+            alunos[i] = alunos[quantidade - 1];
+
+            // Diminui a quantidade de cadastros
+            quantidade--;
+
+            cout << "\nAluno removido com sucesso!\n";
+
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        cout << "\nCadastro nao localizado!\n";
+    }
+}
+
+
+int main() {
+    int opcao;
+
+    do {
+        cout << "\n===== SISTEMA DE CADASTRO DE ALUNOS =====\n";
+        cout << "01 - Cadastrar\n";
+        cout << "02 - Consultar\n";
+        cout << "03 - Listar\n";
+        cout << "04 - Remover\n";
+        cout << "05 - Sair do Sistema\n";
+        cout << "\nDigite uma opcao: ";
+
+        cin >> opcao;
+
+        switch (opcao) {
+            case 1:
+                cadastrar();
+                break;
+
+            case 2:
+                consultar();
+                break;
+
+            case 3:
+                listar();
+                break;
+
+            case 4:
+                remover();
+                break;
+
+            case 5:
+                cout << "\nSaindo do sistema...\n";
+                break;
+
+            default:
+                cout << "\nOpcao invalida! Tente novamente.\n";
+        }
+
+    } while (opcao != 5);
+
+    return 0;
+}
