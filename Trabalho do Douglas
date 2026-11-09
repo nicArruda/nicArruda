@@ -103,10 +103,10 @@ void remover() {
     for (int i = 0; i < quantidade; i++) {
         if (alunos[i].matricula == matricula) {
 
-            // Copia o ultimo cadastro para a posicao removida
+            
             alunos[i] = alunos[quantidade - 1];
 
-            // Diminui a quantidade de cadastros
+            
             quantidade--;
 
             cout << "\nAluno removido com sucesso!\n";
